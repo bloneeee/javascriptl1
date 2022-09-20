@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+            #myBox{
+                width: 50px;
+                height: 50px;
+                background-color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myBox">The wind rises</div>
+
+        <script type="text/javascript">
+            function getFullscreenElement(){
+                return document.fullscreenElement
+                    || document.webkitFullscreenElement
+                    || document.mozFullscreenElement
+                    || document.msFullscreenElement;
+            }
+
+            function toggleFullscreen(){
+                if(getFullscreenElement()){
+                    document.exitFullscreen();
+                }else{
+                    document.getElementById("myBox").requestFullscreen().catch(console.log);
+                }
+            }
+
+            window.addEventListener("dblclick",()=>{
+                toggleFullscreen();
+            });
+
+            document.addEventListener("fullscreenchange",()=>{
+                console.log('full screen changed!')
+            })
+        </script>
+    </body>
+</html>

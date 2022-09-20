@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L5 Modal Box</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="./style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Modal Signup</h2>
+
+            <button id="btn-signup">Signup</button>
+            <button id="btn-fullscreen">Open Full Screen</button>
+            <button id="btn-closescreen">Close Full Screen</button>
+
+            <!-- START MODAL AREA-->
+                <!-- Start Signup Modal -->
+                <div id="signupmodal" class="modal">
+                    <span class="btn-close">x</span>
+
+                    <form class="form" action="" method="">
+                        <h2>Register Form</h2>
+
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" id="username" class="input-group-text" placeholder="Username"/>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" name="email" id="email" class="input-group-text" placeholder="Email"/>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-key"></i>
+                            <input type="password" name="password" id="password" class="input-group-text" placeholder="Password"/>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- End Signup Modal -->
+            <!-- END MODAL AREA-->
+        </div>
+
+        <script src="./app.js" type="text/javascript"></script>
+    </body>
+</html>
